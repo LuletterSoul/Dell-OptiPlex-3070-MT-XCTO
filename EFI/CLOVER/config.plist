@@ -217,14 +217,12 @@
 		<false/>
 		<key>Debug</key>
 		<false/>
-		<key>DefaultLoader</key>
-		<string>boot.efi</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverDoRecovery</key>
-		<true/>
+		<false/>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -248,7 +246,7 @@
 			<key>AFGLowPowerState</key>
 			<true/>
 			<key>Inject</key>
-			<integer>1</integer>
+			<integer>11</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -336,6 +334,13 @@
 	<dict>
 		<key>EmbeddedThemeType</key>
 		<string>Dark</string>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+			<string>10370458-28EA-4E24-A692-E02AD589D8B1</string>
+			<string>420A4BA2-4EEE-4E9E-904A-CFF01EB2ED75</string>
+			<string>C15496D1-5D39-43AF-B1DB-F7E9BDE162B7</string>
+		</array>
 		<key>Language</key>
 		<string>en:0</string>
 		<key>Mouse</key>
@@ -349,10 +354,12 @@
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
+		<key>Scan</key>
+		<true/>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>SimpleThemeDark</string>
+		<string>Catalina</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -623,17 +630,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/17/2018</string>
+		<string>09/17/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MM81.88Z.F000.B00.1809171422</string>
+		<string>MM81.88Z.F000.B00.1909172039</string>
 		<key>Board-ID</key>
 		<string>Mac-7BA5B2DFE22DDD8C</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C07816701GU1M</string>
+		<string>C07837403GU1H</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -645,13 +652,13 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>220.207.27.0.0</string>
+		<string>1037.0.78.0.0</string>
 		<key>Family</key>
 		<string>Mac mini</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFD8FF466</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
+		<string>0xFFDFFF7F</string>
 		<key>LocationInChassis</key>
 		<string>Part Component</string>
 		<key>Manufacturer</key>
@@ -659,18 +666,20 @@
 		<key>Mobile</key>
 		<false/>
 		<key>PlatformFeature</key>
-		<string>0x02</string>
+		<string>0x20</string>
 		<key>ProductName</key>
 		<string>Macmini8,1</string>
 		<key>SerialNumber</key>
-		<string>C07WL0YDJYVX</string>
+		<string>C07XD0X7JYVX</string>
 		<key>SmUUID</key>
-		<string>39EC9988-9E43-49F2-AB04-4419090DFC99</string>
+		<string>6F27FF61-4E0D-4192-B6E3-373BD840A282</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>CustomUUID</key>
+		<string>2CCADC0C-6A1E-5F43-BF72-46DFC547E41B</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
