@@ -181,9 +181,9 @@
 		<key>FixHeaders</key>
 		<true/>
 		<key>FixMCFG</key>
-		<true/>
+		<false/>
 		<key>HaltEnabler</key>
-		<true/>
+		<false/>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -205,6 +205,8 @@
 			<true/>
 			<key>NoOemTableId</key>
 			<true/>
+			<key>PluginType</key>
+			<string>1</string>
 		</dict>
 		<key>smartUPS</key>
 		<false/>
@@ -232,10 +234,13 @@
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
+	<key>BootGraphics</key>
+	<dict>
+		<key>UIScale</key>
+		<integer>2</integer>
+	</dict>
 	<key>CPU</key>
 	<dict>
-		<key>Type</key>
-		<string>0x0705</string>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
@@ -259,10 +264,6 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				BwCbPg==
-				</data>
-				<key>device-id</key>
-				<data>
-				kj4AAA==
 				</data>
 				<key>framebuffer-con0-busid</key>
 				<data>
@@ -300,17 +301,9 @@
 				<data>
 				AAgAAA==
 				</data>
-				<key>framebuffer-fbmem</key>
-				<data>
-				AACQAA==
-				</data>
 				<key>framebuffer-patch-enable</key>
 				<data>
 				AQAAAA==
-				</data>
-				<key>framebuffer-stolenmem</key>
-				<data>
-				AAAwAQ==
 				</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>
@@ -385,17 +378,66 @@
 		<key>AppleIntelCPUPM</key>
 		<false/>
 		<key>AppleRTC</key>
-		<true/>
+		<false/>
 		<key>Debug</key>
 		<false/>
 		<key>DellSMBIOSPatch</key>
-		<false/>
+		<true/>
 		<key>KernelCpu</key>
 		<false/>
 		<key>KernelLapic</key>
 		<false/>
 		<key>KernelPm</key>
-		<true/>
+		<false/>
+		<key>KernelToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				ILniAAAADzA=
+				</data>
+				<key>Replace</key>
+				<data>
+				ILniAAAAkJA=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.13 release kernel (credit Vandroiy)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				igKEwHRE
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Replace</key>
+				<data>
+				igKEwOtE
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.14 release kernel (credit Vandroiy)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				igKEwHRC
+				</data>
+				<key>MatchOS</key>
+				<string>10.14.x</string>
+				<key>Replace</key>
+				<data>
+				igKEwOtC
+				</data>
+			</dict>
+		</array>
 		<key>KernelXCPM</key>
 		<false/>
 		<key>KextsToPatch</key>
@@ -630,33 +672,33 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/17/2019</string>
+		<string>08/30/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MM81.88Z.F000.B00.1909172039</string>
+		<string>IM191.88Z.F000.B00.1908302134</string>
 		<key>Board-ID</key>
-		<string>Mac-7BA5B2DFE22DDD8C</string>
+		<string>Mac-AA95B1DDAB278B95</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C07837403GU1H</string>
+		<string>C029303004NLNV9CB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
 		<string>1.0</string>
 		<key>ChassisAssetTag</key>
-		<string>Mini-Aluminum</string>
+		<string>iMac-Aluminum</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>1037.0.78.0.0</string>
+		<string>1037.0.73.0.0</string>
 		<key>Family</key>
-		<string>Mac mini</string>
+		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFD8FF466</string>
+		<string>0xFD8FF576</string>
 		<key>FirmwareFeaturesMask</key>
 		<string>0xFFDFFF7F</string>
 		<key>LocationInChassis</key>
@@ -666,13 +708,13 @@
 		<key>Mobile</key>
 		<false/>
 		<key>PlatformFeature</key>
-		<string>0x20</string>
+		<string>0x22</string>
 		<key>ProductName</key>
-		<string>Macmini8,1</string>
+		<string>iMac19,1</string>
 		<key>SerialNumber</key>
-		<string>C07XD0X7JYVX</string>
+		<string>C02Z41ZRJV3Q</string>
 		<key>SmUUID</key>
-		<string>6F27FF61-4E0D-4192-B6E3-373BD840A282</string>
+		<string>35BD6F55-1C5C-4F22-8F46-D9CFCD2509DF</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
