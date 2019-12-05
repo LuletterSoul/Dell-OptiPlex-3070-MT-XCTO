@@ -214,7 +214,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>keepsyms=1 dart=0 debug=0x100 -no_compat_check -wegnoegpu</string>
+		<string>keepsyms=1 dart=0 debug=0x100 -wegnoegpu</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -265,13 +265,25 @@
 				<data>
 				BwCbPg==
 				</data>
+				<key>enable-hdmi20</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>enable-lspcon-support</key>
+				<data>
+				AQAAAA==
+				</data>
 				<key>framebuffer-con0-busid</key>
 				<data>
-				AAAAAA==
+				AQAAAA==
 				</data>
 				<key>framebuffer-con0-enable</key>
 				<data>
 				AQAAAA==
+				</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>
+				EgAAAA==
 				</data>
 				<key>framebuffer-con0-type</key>
 				<data>
@@ -279,27 +291,27 @@
 				</data>
 				<key>framebuffer-con1-busid</key>
 				<data>
-				AAAAAA==
+				AQAAAA==
 				</data>
 				<key>framebuffer-con1-enable</key>
 				<data>
 				AQAAAA==
 				</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>
+				EgAAAA==
+				</data>
 				<key>framebuffer-con1-type</key>
 				<data>
 				AAgAAA==
-				</data>
-				<key>framebuffer-con2-busid</key>
-				<data>
-				BAAAAA==
 				</data>
 				<key>framebuffer-con2-enable</key>
 				<data>
 				AQAAAA==
 				</data>
-				<key>framebuffer-con2-type</key>
+				<key>framebuffer-con2-pipe</key>
 				<data>
-				AAgAAA==
+				EgAAAA==
 				</data>
 				<key>framebuffer-patch-enable</key>
 				<data>
